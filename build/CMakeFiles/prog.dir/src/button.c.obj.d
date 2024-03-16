@@ -180,4 +180,5 @@ CMakeFiles/prog.dir/src/button.c.obj: \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_locale.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_misc.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/node.h \
+ C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/TxUtils.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/button.h

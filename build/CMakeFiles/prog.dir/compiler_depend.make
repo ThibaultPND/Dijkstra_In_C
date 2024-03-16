@@ -236,6 +236,7 @@ CMakeFiles/prog.dir/src/button.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_video.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/begin_code.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/close_code.h \
+  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/TxUtils.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/button.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/node.h \
   C:/Program\ Files/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h \
@@ -552,7 +553,6 @@ CMakeFiles/prog.dir/src/main.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_G
   C:/Program\ Files/mingw64/x86_64-w64-mingw32/include/winsdkver.h
 
 CMakeFiles/prog.dir/src/node.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/node.c \
-  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/Project.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_assert.h \
   C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_atomic.h \

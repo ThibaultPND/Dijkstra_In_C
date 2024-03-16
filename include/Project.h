@@ -14,17 +14,27 @@
 #define GRID_SIZE 8
 #define TILE_SIZE 100
 
+#define DISTANCE_MAX_NODE_CREATION 100
+#define DISTANCE_MAX_LINK_CREATION 20
+#define DISTANCE_MAX_SUPPRESSION 10
+
 extern SDL_Renderer *renderer;
 extern SDL_Window *window;
 
+extern Node *startNode;
+extern Node *endNode;
 typedef enum
 {
     NODE,
     LINK,
-    MOVE
+    MOVE,
+    START,
+    END
 } cursor_t;
 
 void renderMap(NodeList *nodes);
+void renderCursorMode(cursor_t);
+void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mode);
 void ErrorBox(const char *message);
 
 #endif // __PROJECT_H__

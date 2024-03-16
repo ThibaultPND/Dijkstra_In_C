@@ -14,11 +14,27 @@ gcc -o build\prog -Iinclude -Iinclude/SDL2 src/*.c -Llib -lSDL2main -lSDL2 -stat
 #include "node.h"
 #include "button.h"
 
-void handleButtons(SDL_Point mouse, Button *boutons, int count_button);
-void function(void *args)
+cursor_t cursor_mode;
+
+void cursorToNode(void *args)
 {
-    int *value = (int *)args;
-    printf("Hello : %d !", *value);
+    cursor_mode = NODE;
+}
+void cursorToMove(void *args)
+{
+    cursor_mode = MOVE;
+}
+void cursorToLink(void *args)
+{
+    cursor_mode = LINK;
+}
+void buttonStart(void *args)
+{
+    cursor_mode = START;
+}
+void buttonEnd(void *args)
+{
+    cursor_mode = END;
 }
 
 int main(int argc, char *argv[])
@@ -49,15 +65,19 @@ int main(int argc, char *argv[])
     SDL_Point mouse;
 
     // Creation des  boutons
-    int button_count = 1;
+    int button_count = 5;
     Button boutons[20];
-    initButton(&boutons[0], 794, 215, 150, 57, (SDL_Color){255, 0, 0, 255}, &function);
+    initButton(&boutons[0], 794, 185, 160, 57, "assets/node_button.bmp", &cursorToNode);
+    initButton(&boutons[1], 794, 265, 160, 57, "assets/move_button.bmp", &cursorToMove);
+    initButton(&boutons[2], 794, 345, 160, 57, "assets/link_button.bmp", &cursorToLink);
+    initButton(&boutons[3], 794, 415, 78, 78, "assets/start_button.bmp", &buttonStart);
+    initButton(&boutons[4], 876, 415, 78, 78, "assets/end_button.bmp", &buttonEnd);
 
     // Initialisation des noeuds
     NodeList *nodes = CreateNodeList();
 
     // Mode de la souris
-    cursor_t cursor_mode = NODE;
+    cursor_mode = NODE;
 
     // Programme
     SDL_bool programLaunched = SDL_TRUE;
@@ -79,37 +99,7 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                    switch (cursor_mode)
-                    {
-                    case NODE:
-                        NodeList *newNode = (NodeList *)malloc(sizeof(NodeList));
-                        if (newNode != NULL)
-                        {
-                            newNode->node = (Node *)malloc(sizeof(Node)); // Allouer de la mémoire pour newNode->node
-                            if (newNode->node != NULL)
-                            {
-                                newNode->next = nodes;
-                                newNode->node->position.x = mouse.x;
-                                newNode->node->position.y = mouse.y;
-                                nodes = newNode;
-                            }
-                            else
-                            {
-                                free(newNode); // Libérer la mémoire allouée pour newNode
-                                exit(1);
-                            }
-                        }
-                        break;
-                    case LINK:
-                        /* code */
-                        break;
-                    case MOVE:
-                        /* code */
-                        break;
-
-                    default:
-                        break;
-                    }
+                    handleNodeClickAction(mouse, &nodes, cursor_mode);
                 }
             case SDL_KEYDOWN:
                 switch (event.key.keysym.sym)
@@ -125,6 +115,7 @@ int main(int argc, char *argv[])
                     break;
                 case SDLK_BACKSPACE:
                     system("cls");
+                    ClearNodeList(&nodes);
                     printf("cleared\n");
                 }
                 break;
@@ -137,6 +128,7 @@ int main(int argc, char *argv[])
         SDL_SetRenderDrawColor(renderer, 0xF0, 0xF0, 0xF0, SDL_ALPHA_OPAQUE);
         SDL_RenderClear(renderer);
         renderMap(nodes);
+        renderCursorMode(cursor_mode);
         drawButton(boutons, button_count);
         SDL_RenderPresent(renderer);
 
@@ -150,6 +142,7 @@ int main(int argc, char *argv[])
     while (current != NULL)
     {
         next = current->next;
+        ClearNodeList(&current->node->neighbours);
         free(current->node);
         free(current);
         current = next;
@@ -161,16 +154,4 @@ int main(int argc, char *argv[])
     printf("...fin du programme\n");
 
     return EXIT_SUCCESS;
-}
-
-void handleButtons(SDL_Point mouse, Button *boutons, int count_button)
-{
-    for (int i = 0; i < count_button; i++)
-    {
-        if (boutons[i].onClick != NULL && isPointInsideButton(&boutons[i], mouse.x, mouse.y))
-        {
-            int data = 4;
-            boutons[i].onClick(&data); // Appel de la fonction associée au clic avec les arguments
-        }
-    }
 }

@@ -1,27 +1,6 @@
 CMakeFiles/prog.dir/src/node.c.obj: \
  C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\node.c \
- C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/Project.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\stdio.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt_stdio_config.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_mac.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_secapi.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\vadefs.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_ddk.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_off_t.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\swprintf.inl \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\sec_api\stdio_s.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\stdlib.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt_wstdlib.h \
- c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include-fixed\limits.h \
- c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include-fixed\syslimits.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\limits.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\crtdefs.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\sec_api\stdlib_s.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\malloc.h \
- c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\mm_malloc.h \
- c:\progra~1\mingw64\x86_64-w64-mingw32\include\errno.h \
+ C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/node.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_main.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_stdinc.h \
@@ -34,6 +13,13 @@ CMakeFiles/prog.dir/src/node.c.obj: \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\sdkddkver.h \
  c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\stddef.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\stddef.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\crtdefs.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_mac.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_secapi.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\vadefs.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\sdks/_mingw_ddk.h \
  c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\stdarg.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\stdarg.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_stdarg.h \
@@ -49,12 +35,22 @@ CMakeFiles/prog.dir/src/node.c.obj: \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\process.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt_startup.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\sys\types.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\_mingw_off_t.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_rwops.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_clipboard.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_cpuinfo.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\intrin.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\setjmp.h \
  c:\progra~1\mingw64\x86_64-w64-mingw32\include\psdk_inc\intrin-impl.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\stdlib.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt_wstdlib.h \
+ c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include-fixed\limits.h \
+ c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include-fixed\syslimits.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\limits.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\sec_api\stdlib_s.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\malloc.h \
+ c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\mm_malloc.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\errno.h \
  c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\x86intrin.h \
  c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\x86gprintrin.h \
  c:\progra~1\mingw64\lib\gcc\x86_64-w64-mingw32\12.2.0\include\ia32intrin.h \
@@ -179,5 +175,7 @@ CMakeFiles/prog.dir/src/node.c.obj: \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_version.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_locale.h \
  C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/SDL2/SDL_misc.h \
- C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/node.h \
- C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/include/node.h
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\stdio.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\corecrt_stdio_config.h \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\swprintf.inl \
+ c:\progra~1\mingw64\x86_64-w64-mingw32\include\sec_api\stdio_s.h

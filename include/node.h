@@ -1,6 +1,9 @@
 #if !defined(__NODE_H__)
 #define __NODE_H__
 
+#include <SDL2/SDL.h>
+#include <stdio.h>
+#include <stdlib.h>
 typedef struct
 {
     int gCost; // Current to start.
@@ -10,9 +13,6 @@ typedef struct
 
 typedef struct Node
 {
-    // To have an unique texture placement.
-    SDL_Rect *texture;
-
     t_Costs costs;
     SDL_Point position;
 
@@ -29,10 +29,13 @@ typedef struct NodeList
 } NodeList;
 
 NodeList *CreateNodeList();
-void PrintNodeList(NodeList *node_list);
-void AddNodeToList(NodeList **node_list, Node *node);
-void RemoveNodeInList(NodeList **node_list, Node *nodeToRemove);
-NodeList *SearchNodeInList(NodeList *node_list, SDL_Point position);
+int getDistance(SDL_Point start, SDL_Point end);
+void PrintNodeList(NodeList *nodes);
+void AddNodeToList(NodeList **nodes, Node *node);
+void RemoveNodeInList(NodeList **nodes, Node *nodeToRemove);
+NodeList *SearchNodeInList(NodeList *nodes, SDL_Point position);
+NodeList *GetClosestNodeInListByDistance(NodeList *nodes, SDL_Point caller_position, int dist);
+void RemoveNeighbour(Node *node, Node *neighbour);
+void ClearNodeList(NodeList **nodes);
 
-void ClearNodeList(NodeList **node_list);
 #endif // __NODE_H__

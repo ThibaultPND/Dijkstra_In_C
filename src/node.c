@@ -1,4 +1,3 @@
-#include "Project.h"
 #include "node.h"
 
 // Prototype
@@ -58,6 +57,7 @@ void RemoveNodeInList(NodeList **node_list, Node *nodeToRemove)
             {
                 prev->next = current->next;
             }
+            
             free(current);
             break;
         }
@@ -97,4 +97,33 @@ NodeList *SearchNodeInList(NodeList *node_list, SDL_Point position)
         current = current->next;
     }
     return NULL;
+}
+
+NodeList *GetClosestNodeInListByDistance(NodeList *nodes, SDL_Point caller_position, int radius)
+{
+    NodeList *current = nodes;
+    while (current != NULL)
+    {
+        if (getDistance(caller_position, current->node->position) <= radius)
+        {
+            return current;
+        }
+
+        current = current->next;
+    }
+    return NULL;
+}
+
+void RemoveNeighbour(Node *node, Node *neighbour) {
+    NodeList *current_neighbour =node->neighbours;
+    while (current_neighbour != NULL)
+    {
+        if (current_neighbour->node == neighbour)
+        {
+            /* code */
+        }
+        
+        current_neighbour = current_neighbour->next;
+    }
+    
 }
