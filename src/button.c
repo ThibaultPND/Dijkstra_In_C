@@ -2,7 +2,36 @@
 #include "TxUtils.h"
 #include "button.h"
 
-// TODO Faire une fonction qui clear les boutons.
+/** \todo Faire une fonction qui clear les boutons. */
+
+
+cursor_t cursor_mode;
+SDL_bool launch_search = SDL_FALSE;
+
+void cursorToNode(void *args)
+{
+    cursor_mode = NODE;
+}
+void cursorToMove(void *args)
+{
+    cursor_mode = MOVE;
+}
+void cursorToLink(void *args)
+{
+    cursor_mode = LINK;
+}
+void buttonStart(void *args)
+{
+    cursor_mode = START;
+}
+void buttonEnd(void *args)
+{
+    cursor_mode = END;
+}
+void buttonLaunch(void *args)
+{
+    launch_search = SDL_TRUE;
+}
 
 // Fonction pour initialiser un bouton
 void initButton(Button *button, int x, int y, int w, int h, const char *path, void (*onClick)(void *))

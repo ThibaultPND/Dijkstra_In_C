@@ -8,34 +8,11 @@
 *
 gcc -o build\prog -Iinclude -Iinclude/SDL2 src/*.c -Llib -lSDL2main -lSDL2 -static -DSDL_MAIN_HANDLED && build\monProgramme.exe
 ***************************************************************/
-#include <Project.h>
 #include <SDL2/SDL.h>
+#include "Project.h"
 #include "TxUtils.h"
 #include "node.h"
 #include "button.h"
-
-cursor_t cursor_mode;
-
-void cursorToNode(void *args)
-{
-    cursor_mode = NODE;
-}
-void cursorToMove(void *args)
-{
-    cursor_mode = MOVE;
-}
-void cursorToLink(void *args)
-{
-    cursor_mode = LINK;
-}
-void buttonStart(void *args)
-{
-    cursor_mode = START;
-}
-void buttonEnd(void *args)
-{
-    cursor_mode = END;
-}
 
 int main(int argc, char *argv[])
 {
@@ -65,13 +42,14 @@ int main(int argc, char *argv[])
     SDL_Point mouse;
 
     // Creation des  boutons
-    int button_count = 5;
-    Button boutons[20];
+    int button_count = 6;
+    Button boutons[button_count];
     initButton(&boutons[0], 794, 185, 160, 57, "assets/node_button.bmp", &cursorToNode);
     initButton(&boutons[1], 794, 265, 160, 57, "assets/move_button.bmp", &cursorToMove);
     initButton(&boutons[2], 794, 345, 160, 57, "assets/link_button.bmp", &cursorToLink);
     initButton(&boutons[3], 794, 415, 78, 78, "assets/start_button.bmp", &buttonStart);
     initButton(&boutons[4], 876, 415, 78, 78, "assets/end_button.bmp", &buttonEnd);
+    initButton(&boutons[5], 794, 505, 160, 57, "assets/launch_button.bmp", &buttonLaunch);
 
     // Initialisation des noeuds
     NodeList *nodes = CreateNodeList();
@@ -96,6 +74,11 @@ int main(int argc, char *argv[])
                 if (mouse.x >= LARGEUR_FENETRE - LARGEUR_GUI - 10) // 10 = Epsilon
                 {
                     handleButtons(mouse, boutons, button_count);
+                    if (launch_search)
+                    {
+                        launch_search = SDL_FALSE;
+                        FindShortestPath(nodes, startNode, endNode);
+                    }
                 }
                 else
                 {

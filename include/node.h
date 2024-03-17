@@ -33,7 +33,7 @@ int getDistance(SDL_Point start, SDL_Point end);
 void PrintNodeList(NodeList *nodes);
 void AddNodeToList(NodeList **nodes, Node *node);
 void RemoveNodeInList(NodeList **nodes, Node *nodeToRemove);
-NodeList *SearchNodeInList(NodeList *nodes, SDL_Point position);
+SDL_bool IsNodeInList(NodeList *nodes, Node *node);
 NodeList *GetClosestNodeInListByDistance(NodeList *nodes, SDL_Point caller_position, int dist);
 void RemoveNeighbour(Node *node, Node *neighbour);
 void ClearNodeList(NodeList **nodes);

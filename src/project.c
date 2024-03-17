@@ -48,6 +48,7 @@ void renderMap(NodeList *nodes)
     }
     SDL_DestroyTexture(nodeTx);
 
+    // Afficher le drapeau de départ.
     if (startNode != NULL)
     {
         SDL_Rect green_flag_rect;
@@ -57,6 +58,7 @@ void renderMap(NodeList *nodes)
         SDL_RenderCopy(renderer, green_flag_texture, NULL, &green_flag_rect);
         SDL_DestroyTexture(green_flag_texture);
     }
+    // Afficher le drapeau d'arrivée.
     if (endNode != NULL)
     {
         SDL_Rect red_flag_rect;
@@ -66,6 +68,22 @@ void renderMap(NodeList *nodes)
         SDL_RenderCopy(renderer, red_flag_texture, NULL, &red_flag_rect);
         SDL_DestroyTexture(red_flag_texture);
     }
+
+    // Afficher le chemin le plus court si il y en a un.
+    SDL_SetRenderDrawColor(renderer, 0xFF, 0x80, 0x00, 255);
+    Node *current = endNode;
+    if (current != NULL)
+        while(current->parent != NULL){
+            thickLine(
+                current->position.x,
+                current->position.y,
+                current->parent->position.x,
+                current->parent->position.y,
+                5
+            );
+
+            current = current->parent;
+        }
 }
 void renderCursorMode(cursor_t cursor)
 {
@@ -174,12 +192,12 @@ void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mo
             }
             else
             {
-                // Si un premier nœud est déjà sélectionné, enregistrer le nœud cliqué comme second nœud sélectionné
+                // SearchNodeInListSi un premier nœud est déjà sélectionné, enregistrer le nœud cliqué comme second nœud sélectionné
                 // Mettre à jour les listes de voisins des deux nœuds pour créer le lien entre eux
                 if (selectedNode != clickedNode->node)
                 {
                     // Si le lien existe déja. Le supprimer
-                    if (SearchNodeInList(selectedNode->neighbours, clickedNode->node->position) == NULL)
+                    if (IsNodeInList(selectedNode->neighbours, clickedNode->node) == SDL_FALSE)
                     {
                         AddNodeToList(&selectedNode->neighbours, clickedNode->node);
                         AddNodeToList(&clickedNode->node->neighbours, selectedNode);
@@ -214,6 +232,92 @@ void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mo
         break;
     }
 }
+
+t_Costs GetCosts(Node *current,Node *parent, Node *endNode)
+{
+    t_Costs costs;
+    if (parent != NULL)
+    {
+        costs.gCost = parent->costs.gCost + getDistance(current->position, parent->position);
+    }else{
+        costs.gCost = 0;
+    }
+    costs.hCost = getDistance(current->position, endNode->position);
+    costs.fCost = costs.gCost + costs.hCost;
+
+    return costs;
+}
+
+Node *findLowestFcostInList(NodeList *nodes)
+{
+    NodeList *current = nodes;
+    Node *lowest = nodes->node;
+    while (current != NULL)
+    {
+        if (current->node->costs.fCost < lowest->costs.fCost)
+            lowest = current->node;
+
+        current = current->next;
+    }
+    return lowest;
+}
+
+int FindShortestPath(NodeList *nodes, Node *start, Node *end){
+    NodeList *open  = CreateNodeList();
+    NodeList *close = CreateNodeList();
+    AddNodeToList(&open, start);
+    open->node->costs = GetCosts(open->node,NULL, end);
+
+    int count = 0;
+    while (SDL_TRUE)
+    {
+        count++;
+        Node *current_node = findLowestFcostInList(open);
+
+        RemoveNodeInList(&open, current_node);
+        AddNodeToList(&close, current_node);
+
+        if (current_node == end)
+        {
+            ClearNodeList(&open);
+            ClearNodeList(&close);
+            return 1;
+        }
+        // ! ERROR >>>> fix
+        NodeList *current_neighbour = current_node->neighbours;
+        while (current_neighbour != NULL)
+        {
+            printf("premier\n");
+            if (IsNodeInList(close, current_neighbour->node))
+            {
+                printf("Voisin suivant\n");
+                current_neighbour = current_neighbour->next;
+                continue;
+            }
+            printf("deuxième\n");
+
+            if (IsNodeInList(open, current_neighbour->node))
+            {
+                t_Costs new_costs = GetCosts(current_neighbour->node,current_node, end);
+                if (new_costs.fCost < current_neighbour->node->costs.fCost)
+                {
+                    current_neighbour->node->costs.fCost = new_costs.fCost;
+                    current_neighbour->node->parent = current_node;
+                }
+            }
+            else
+            {
+                printf("3\n");
+                current_neighbour->node->costs = GetCosts(current_neighbour->node, current_node, end);
+                current_neighbour->node->parent = current_node;
+                AddNodeToList(&open,current_neighbour->node);
+
+            }
+            current_neighbour = current_neighbour->next;
+        }
+    }
+}
+
 
 void ErrorBox(const char *message)
 {

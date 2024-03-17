@@ -57,7 +57,7 @@ void RemoveNodeInList(NodeList **node_list, Node *nodeToRemove)
             {
                 prev->next = current->next;
             }
-            
+
             free(current);
             break;
         }
@@ -84,19 +84,21 @@ int getDistance(SDL_Point start, SDL_Point end)
     return SDL_sqrt(SDL_pow(start.x - end.x, 2) + SDL_pow(start.y - end.y, 2));
 }
 
-NodeList *SearchNodeInList(NodeList *node_list, SDL_Point position)
+SDL_bool IsNodeInList(NodeList *node_list, Node *node)
 {
+    fprintf(stderr,"Recherche dans la liste...");
     NodeList *current = node_list;
     while (current != NULL)
     {
-        if (current->node->position.x == position.x &&
-            current->node->position.y == position.y)
+        if (current->node == node)
         {
-            return current;
+            printf("dans la liste\n");
+            return SDL_TRUE;
         }
         current = current->next;
     }
-    return NULL;
+    printf("pas dans la liste\n");
+    return SDL_FALSE;
 }
 
 NodeList *GetClosestNodeInListByDistance(NodeList *nodes, SDL_Point caller_position, int radius)
@@ -122,8 +124,8 @@ void RemoveNeighbour(Node *node, Node *neighbour) {
         {
             /* code */
         }
-        
+
         current_neighbour = current_neighbour->next;
     }
-    
+
 }

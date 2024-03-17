@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "project.h": "c",
-        "sdl.h": "c"
+        "sdl.h": "c",
+        "node.h": "c"
     }
 }
