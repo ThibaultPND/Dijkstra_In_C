@@ -36,6 +36,6 @@ void renderMap(NodeList *nodes);
 void renderCursorMode(cursor_t);
 void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mode);
 void ErrorBox(const char *message);
-int FindShortestPath(NodeList *nodes, Node *start, Node *end);
+int FindShortestPath(Node *start, Node *end);
 
 #endif // __PROJECT_H__

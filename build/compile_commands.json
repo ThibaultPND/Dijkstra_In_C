@@ -1,32 +1,32 @@
 [
 {
-  "directory": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\main.c.obj -c C:\\Users\\thibl\\Documents\\GitHub\\Unadvanced_GPS\\src\\main.c",
-  "file": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/main.c",
+  "directory": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\main.c.obj -c C:\\Users\\SN2\\Documents\\GitHub\\Unadvanced_GPS\\src\\main.c",
+  "file": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/main.c",
   "output": "CMakeFiles/prog.dir/src/main.c.obj"
 },
 {
-  "directory": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\project.c.obj -c C:\\Users\\thibl\\Documents\\GitHub\\Unadvanced_GPS\\src\\project.c",
-  "file": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/project.c",
+  "directory": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\project.c.obj -c C:\\Users\\SN2\\Documents\\GitHub\\Unadvanced_GPS\\src\\project.c",
+  "file": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/project.c",
   "output": "CMakeFiles/prog.dir/src/project.c.obj"
 },
 {
-  "directory": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\TxUtils.c.obj -c C:\\Users\\thibl\\Documents\\GitHub\\Unadvanced_GPS\\src\\TxUtils.c",
-  "file": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/TxUtils.c",
+  "directory": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\TxUtils.c.obj -c C:\\Users\\SN2\\Documents\\GitHub\\Unadvanced_GPS\\src\\TxUtils.c",
+  "file": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/TxUtils.c",
   "output": "CMakeFiles/prog.dir/src/TxUtils.c.obj"
 },
 {
-  "directory": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\node.c.obj -c C:\\Users\\thibl\\Documents\\GitHub\\Unadvanced_GPS\\src\\node.c",
-  "file": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/node.c",
+  "directory": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\node.c.obj -c C:\\Users\\SN2\\Documents\\GitHub\\Unadvanced_GPS\\src\\node.c",
+  "file": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/node.c",
   "output": "CMakeFiles/prog.dir/src/node.c.obj"
 },
 {
-  "directory": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\button.c.obj -c C:\\Users\\thibl\\Documents\\GitHub\\Unadvanced_GPS\\src\\button.c",
-  "file": "C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/button.c",
+  "directory": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\gcc.exe -DSDL_MAIN_HANDLED @CMakeFiles/prog.dir/includes_C.rsp -g -o CMakeFiles\\prog.dir\\src\\button.c.obj -c C:\\Users\\SN2\\Documents\\GitHub\\Unadvanced_GPS\\src\\button.c",
+  "file": "C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/button.c",
   "output": "CMakeFiles/prog.dir/src/button.c.obj"
 }
 ]

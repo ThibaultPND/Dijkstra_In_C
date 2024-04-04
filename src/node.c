@@ -86,18 +86,15 @@ int getDistance(SDL_Point start, SDL_Point end)
 
 SDL_bool IsNodeInList(NodeList *node_list, Node *node)
 {
-    fprintf(stderr,"Recherche dans la liste...");
     NodeList *current = node_list;
     while (current != NULL)
     {
         if (current->node == node)
         {
-            printf("dans la liste\n");
             return SDL_TRUE;
         }
         current = current->next;
     }
-    printf("pas dans la liste\n");
     return SDL_FALSE;
 }
 

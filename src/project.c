@@ -73,14 +73,14 @@ void renderMap(NodeList *nodes)
     SDL_SetRenderDrawColor(renderer, 0xFF, 0x80, 0x00, 255);
     Node *current = endNode;
     if (current != NULL)
-        while(current->parent != NULL){
+        while (current->parent != NULL)
+        {
             thickLine(
                 current->position.x,
                 current->position.y,
                 current->parent->position.x,
                 current->parent->position.y,
-                5
-            );
+                5);
 
             current = current->parent;
         }
@@ -146,8 +146,8 @@ void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mo
 
                 neighbourNode = neighbourNode->next;
             }
-
             ClearNodeList(&closestNode->node->neighbours);
+            closestNode->node->parent = NULL;
             RemoveNodeInList(nodes, closestNode->node);
             break;
         }
@@ -233,13 +233,15 @@ void handleNodeClickAction(SDL_Point mouse, NodeList **nodes, cursor_t cursor_mo
     }
 }
 
-t_Costs GetCosts(Node *current,Node *parent, Node *endNode)
+t_Costs GetCosts(Node *current, Node *parent, Node *endNode)
 {
     t_Costs costs;
     if (parent != NULL)
     {
         costs.gCost = parent->costs.gCost + getDistance(current->position, parent->position);
-    }else{
+    }
+    else
+    {
         costs.gCost = 0;
     }
     costs.hCost = getDistance(current->position, endNode->position);
@@ -262,16 +264,22 @@ Node *findLowestFcostInList(NodeList *nodes)
     return lowest;
 }
 
-int FindShortestPath(NodeList *nodes, Node *start, Node *end){
-    NodeList *open  = CreateNodeList();
-    NodeList *close = CreateNodeList();
-    AddNodeToList(&open, start);
-    open->node->costs = GetCosts(open->node,NULL, end);
-
-    int count = 0;
-    while (SDL_TRUE)
+int FindShortestPath(Node *start, Node *end)
+{
+    if (start == NULL || end == NULL)
     {
-        count++;
+        return 1;
+    }
+
+    NodeList *open = CreateNodeList();
+    NodeList *close = CreateNodeList();
+
+    AddNodeToList(&open, start);
+
+    open->node->costs = GetCosts(open->node, NULL, end);
+
+    while (open != NULL)
+    {
         Node *current_node = findLowestFcostInList(open);
 
         RemoveNodeInList(&open, current_node);
@@ -283,22 +291,19 @@ int FindShortestPath(NodeList *nodes, Node *start, Node *end){
             ClearNodeList(&close);
             return 1;
         }
-        // ! ERROR >>>> fix
+        
         NodeList *current_neighbour = current_node->neighbours;
         while (current_neighbour != NULL)
         {
-            printf("premier\n");
             if (IsNodeInList(close, current_neighbour->node))
             {
-                printf("Voisin suivant\n");
                 current_neighbour = current_neighbour->next;
                 continue;
             }
-            printf("deuxième\n");
 
             if (IsNodeInList(open, current_neighbour->node))
             {
-                t_Costs new_costs = GetCosts(current_neighbour->node,current_node, end);
+                t_Costs new_costs = GetCosts(current_neighbour->node, current_node, end);
                 if (new_costs.fCost < current_neighbour->node->costs.fCost)
                 {
                     current_neighbour->node->costs.fCost = new_costs.fCost;
@@ -307,17 +312,16 @@ int FindShortestPath(NodeList *nodes, Node *start, Node *end){
             }
             else
             {
-                printf("3\n");
                 current_neighbour->node->costs = GetCosts(current_neighbour->node, current_node, end);
                 current_neighbour->node->parent = current_node;
-                AddNodeToList(&open,current_neighbour->node);
-
+                AddNodeToList(&open, current_neighbour->node);
             }
             current_neighbour = current_neighbour->next;
         }
     }
+    end->parent = NULL;
+    return 0;
 }
-
 
 void ErrorBox(const char *message)
 {

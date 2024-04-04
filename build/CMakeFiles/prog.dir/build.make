@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\thibl\Documents\GitHub\Unadvanced_GPS
+CMAKE_SOURCE_DIR = C:\Users\SN2\Documents\GitHub\Unadvanced_GPS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build
+CMAKE_BINARY_DIR = C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/prog.dir/depend.make
@@ -70,78 +70,78 @@ include CMakeFiles/prog.dir/flags.make
 
 CMakeFiles/prog.dir/src/main.c.obj: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/src/main.c.obj: CMakeFiles/prog.dir/includes_C.rsp
-CMakeFiles/prog.dir/src/main.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/main.c
+CMakeFiles/prog.dir/src/main.c.obj: C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/main.c
 CMakeFiles/prog.dir/src/main.c.obj: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/prog.dir/src/main.c.obj"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/main.c.obj -MF CMakeFiles\prog.dir\src\main.c.obj.d -o CMakeFiles\prog.dir\src\main.c.obj -c C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/prog.dir/src/main.c.obj"
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/main.c.obj -MF CMakeFiles\prog.dir\src\main.c.obj.d -o CMakeFiles\prog.dir\src\main.c.obj -c C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\main.c
 
 CMakeFiles/prog.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/src/main.c.i"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\main.c > CMakeFiles\prog.dir\src\main.c.i
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\main.c > CMakeFiles\prog.dir\src\main.c.i
 
 CMakeFiles/prog.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/src/main.c.s"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\main.c -o CMakeFiles\prog.dir\src\main.c.s
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\main.c -o CMakeFiles\prog.dir\src\main.c.s
 
 CMakeFiles/prog.dir/src/project.c.obj: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/src/project.c.obj: CMakeFiles/prog.dir/includes_C.rsp
-CMakeFiles/prog.dir/src/project.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/project.c
+CMakeFiles/prog.dir/src/project.c.obj: C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/project.c
 CMakeFiles/prog.dir/src/project.c.obj: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/prog.dir/src/project.c.obj"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/project.c.obj -MF CMakeFiles\prog.dir\src\project.c.obj.d -o CMakeFiles\prog.dir\src\project.c.obj -c C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\project.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/prog.dir/src/project.c.obj"
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/project.c.obj -MF CMakeFiles\prog.dir\src\project.c.obj.d -o CMakeFiles\prog.dir\src\project.c.obj -c C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\project.c
 
 CMakeFiles/prog.dir/src/project.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/src/project.c.i"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\project.c > CMakeFiles\prog.dir\src\project.c.i
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\project.c > CMakeFiles\prog.dir\src\project.c.i
 
 CMakeFiles/prog.dir/src/project.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/src/project.c.s"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\project.c -o CMakeFiles\prog.dir\src\project.c.s
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\project.c -o CMakeFiles\prog.dir\src\project.c.s
 
 CMakeFiles/prog.dir/src/TxUtils.c.obj: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/src/TxUtils.c.obj: CMakeFiles/prog.dir/includes_C.rsp
-CMakeFiles/prog.dir/src/TxUtils.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/TxUtils.c
+CMakeFiles/prog.dir/src/TxUtils.c.obj: C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/TxUtils.c
 CMakeFiles/prog.dir/src/TxUtils.c.obj: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/prog.dir/src/TxUtils.c.obj"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/TxUtils.c.obj -MF CMakeFiles\prog.dir\src\TxUtils.c.obj.d -o CMakeFiles\prog.dir\src\TxUtils.c.obj -c C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/prog.dir/src/TxUtils.c.obj"
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/TxUtils.c.obj -MF CMakeFiles\prog.dir\src\TxUtils.c.obj.d -o CMakeFiles\prog.dir\src\TxUtils.c.obj -c C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c
 
 CMakeFiles/prog.dir/src/TxUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/src/TxUtils.c.i"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c > CMakeFiles\prog.dir\src\TxUtils.c.i
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c > CMakeFiles\prog.dir\src\TxUtils.c.i
 
 CMakeFiles/prog.dir/src/TxUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/src/TxUtils.c.s"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c -o CMakeFiles\prog.dir\src\TxUtils.c.s
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\TxUtils.c -o CMakeFiles\prog.dir\src\TxUtils.c.s
 
 CMakeFiles/prog.dir/src/node.c.obj: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/src/node.c.obj: CMakeFiles/prog.dir/includes_C.rsp
-CMakeFiles/prog.dir/src/node.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/node.c
+CMakeFiles/prog.dir/src/node.c.obj: C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/node.c
 CMakeFiles/prog.dir/src/node.c.obj: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/prog.dir/src/node.c.obj"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/node.c.obj -MF CMakeFiles\prog.dir\src\node.c.obj.d -o CMakeFiles\prog.dir\src\node.c.obj -c C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\node.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/prog.dir/src/node.c.obj"
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/node.c.obj -MF CMakeFiles\prog.dir\src\node.c.obj.d -o CMakeFiles\prog.dir\src\node.c.obj -c C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\node.c
 
 CMakeFiles/prog.dir/src/node.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/src/node.c.i"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\node.c > CMakeFiles\prog.dir\src\node.c.i
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\node.c > CMakeFiles\prog.dir\src\node.c.i
 
 CMakeFiles/prog.dir/src/node.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/src/node.c.s"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\node.c -o CMakeFiles\prog.dir\src\node.c.s
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\node.c -o CMakeFiles\prog.dir\src\node.c.s
 
 CMakeFiles/prog.dir/src/button.c.obj: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/src/button.c.obj: CMakeFiles/prog.dir/includes_C.rsp
-CMakeFiles/prog.dir/src/button.c.obj: C:/Users/thibl/Documents/GitHub/Unadvanced_GPS/src/button.c
+CMakeFiles/prog.dir/src/button.c.obj: C:/Users/SN2/Documents/GitHub/Unadvanced_GPS/src/button.c
 CMakeFiles/prog.dir/src/button.c.obj: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/prog.dir/src/button.c.obj"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/button.c.obj -MF CMakeFiles\prog.dir\src\button.c.obj.d -o CMakeFiles\prog.dir\src\button.c.obj -c C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\button.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/prog.dir/src/button.c.obj"
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/src/button.c.obj -MF CMakeFiles\prog.dir\src\button.c.obj.d -o CMakeFiles\prog.dir\src\button.c.obj -c C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\button.c
 
 CMakeFiles/prog.dir/src/button.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/src/button.c.i"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\button.c > CMakeFiles\prog.dir\src\button.c.i
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\button.c > CMakeFiles\prog.dir\src\button.c.i
 
 CMakeFiles/prog.dir/src/button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/src/button.c.s"
-	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\src\button.c -o CMakeFiles\prog.dir\src\button.c.s
+	C:\PROGRA~1\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\src\button.c -o CMakeFiles\prog.dir\src\button.c.s
 
 # Object files for target prog
 prog_OBJECTS = \
@@ -163,7 +163,7 @@ prog.exe: CMakeFiles/prog.dir/build.make
 prog.exe: CMakeFiles/prog.dir/linkLibs.rsp
 prog.exe: CMakeFiles/prog.dir/objects1.rsp
 prog.exe: CMakeFiles/prog.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable prog.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable prog.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\prog.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/prog.dir/clean:
 .PHONY : CMakeFiles/prog.dir/clean
 
 CMakeFiles/prog.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\thibl\Documents\GitHub\Unadvanced_GPS C:\Users\thibl\Documents\GitHub\Unadvanced_GPS C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build C:\Users\thibl\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles\prog.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\SN2\Documents\GitHub\Unadvanced_GPS C:\Users\SN2\Documents\GitHub\Unadvanced_GPS C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build C:\Users\SN2\Documents\GitHub\Unadvanced_GPS\build\CMakeFiles\prog.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/prog.dir/depend
 

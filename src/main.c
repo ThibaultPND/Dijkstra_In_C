@@ -42,14 +42,12 @@ int main(int argc, char *argv[])
     SDL_Point mouse;
 
     // Creation des  boutons
-    int button_count = 6;
-    Button boutons[button_count];
+    Button boutons[NUMBER_BUTTON];
     initButton(&boutons[0], 794, 185, 160, 57, "assets/node_button.bmp", &cursorToNode);
     initButton(&boutons[1], 794, 265, 160, 57, "assets/move_button.bmp", &cursorToMove);
     initButton(&boutons[2], 794, 345, 160, 57, "assets/link_button.bmp", &cursorToLink);
     initButton(&boutons[3], 794, 415, 78, 78, "assets/start_button.bmp", &buttonStart);
     initButton(&boutons[4], 876, 415, 78, 78, "assets/end_button.bmp", &buttonEnd);
-    initButton(&boutons[5], 794, 505, 160, 57, "assets/launch_button.bmp", &buttonLaunch);
 
     // Initialisation des noeuds
     NodeList *nodes = CreateNodeList();
@@ -61,6 +59,16 @@ int main(int argc, char *argv[])
     SDL_bool programLaunched = SDL_TRUE;
     while (programLaunched)
     {
+        if (startNode != NULL && endNode != NULL)
+        {
+            if (SDL_GetTicks() % 200000)
+            {
+                Uint64 clock = SDL_GetTicks64();
+                FindShortestPath(startNode, endNode);
+                printf("Temps passé : %d\n\n", SDL_GetTicks64() - clock);
+            }
+        }
+
         SDL_Event event;
         while (SDL_PollEvent(&event))
         {
@@ -71,19 +79,12 @@ int main(int argc, char *argv[])
                 break;
             case SDL_MOUSEBUTTONDOWN:
                 SDL_GetMouseState(&mouse.x, &mouse.y);
-                if (mouse.x >= LARGEUR_FENETRE - LARGEUR_GUI - 10) // 10 = Epsilon
-                {
-                    handleButtons(mouse, boutons, button_count);
-                    if (launch_search)
-                    {
-                        launch_search = SDL_FALSE;
-                        FindShortestPath(nodes, startNode, endNode);
-                    }
-                }
+
+                if (mouse.x >= LARGEUR_FENETRE - LARGEUR_GUI - 10)
+                    handleButtonsClickAction(mouse, boutons, NUMBER_BUTTON);
                 else
-                {
                     handleNodeClickAction(mouse, &nodes, cursor_mode);
-                }
+
             case SDL_KEYDOWN:
                 switch (event.key.keysym.sym)
                 {
@@ -112,7 +113,7 @@ int main(int argc, char *argv[])
         SDL_RenderClear(renderer);
         renderMap(nodes);
         renderCursorMode(cursor_mode);
-        drawButton(boutons, button_count);
+        drawButton(boutons, NUMBER_BUTTON);
         SDL_RenderPresent(renderer);
 
         // Limitation du tps du programme à 60.

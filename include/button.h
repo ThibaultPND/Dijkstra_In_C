@@ -3,6 +3,8 @@
 
 #include <SDL2/SDL.h>
 
+#define NUMBER_BUTTON 5
+
 typedef struct
 {
     SDL_Rect rect;
@@ -18,7 +20,7 @@ extern SDL_bool launch_search;
 void initButton(Button *button, int x, int y, int w, int h, const char *path, void (*onClick)(void *));
 void drawButton(Button *boutons, int button_count);
 int isPointInsideButton(Button *button, int x, int y);
-void handleButtons(SDL_Point mouse, Button *boutons, int count_button);
+void handleButtonsClickAction(SDL_Point mouse, Button *boutons, int count_button);
 
 // callback
 void cursorToNode(void *args);

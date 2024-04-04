@@ -60,7 +60,7 @@ int isPointInsideButton(Button *button, int x, int y)
             y >= button->rect.y && y <= button->rect.y + button->rect.h);
 }
 
-void handleButtons(SDL_Point mouse, Button *boutons, int count_button)
+void handleButtonsClickAction(SDL_Point mouse, Button *boutons, int count_button)
 {
     for (int i = 0; i < count_button; i++)
     {
